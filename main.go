@@ -49,5 +49,5 @@ func getCourses(ctx context.Context, num int, db *sql.DB) {
 		fmt.Printf("err: %v", err)
 		return
 	}
-	fmt.Printf("number of rows: %d", numRows)
+	fmt.Printf("number of rows: %d\n", numRows)
 }
