@@ -46,8 +46,8 @@ func getCourses(ctx context.Context, num int, db *sql.DB) {
 	var numRows int
 	err := db.QueryRowContext(ctx, "select count(*) from courses").Scan(&numRows)
 	if err != nil {
-		fmt.Printf("number of rows: %d", numRows)
+		fmt.Printf("err: %v", err)
 		return
 	}
-	fmt.Printf("err: %v", err)
+	fmt.Printf("number of rows: %d", numRows)
 }
