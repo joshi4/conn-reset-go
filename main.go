@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	_ "github.com/jackc/pgx/v4/pgxpool"
+	_ "github.com/jackc/pgx/v4/stdlib"
 )
 
 func main() {
