@@ -22,7 +22,7 @@ func main() {
 
 	ctx := context.Background()
 	GetCourses(ctx, db)
-	fmt.Println("initial calls ended")
+	fmt.Println("initial calls ended.")
 	// initial queries end.
 	for {
 		<-time.After(50 * time.Minute)
@@ -46,8 +46,8 @@ func getCourses(ctx context.Context, num int, db *sql.DB) {
 	var numRows int
 	err := db.QueryRowContext(ctx, "select count(*) from courses").Scan(&numRows)
 	if err != nil {
-		fmt.Printf("err: %v", err)
+		fmt.Printf("%d: err: %v\n", num, err)
 		return
 	}
-	fmt.Printf("number of rows: %d\n", numRows)
+	fmt.Printf("%d: number of rows: %d\n", num, numRows)
 }
