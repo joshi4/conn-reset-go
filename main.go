@@ -22,7 +22,7 @@ func main() {
 
 	ctx := context.Background()
 	GetCourses(ctx, db)
-	fmt.Println("initial calls ended.")
+	fmt.Println("initial calls ended")
 	// initial queries end.
 	for {
 		<-time.After(50 * time.Minute)
